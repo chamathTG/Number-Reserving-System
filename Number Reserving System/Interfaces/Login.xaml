@@ -1,0 +1,265 @@
+﻿<Window x:Class="Number_Reserving_System.Interfaces.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Number_Reserving_System.Interfaces"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        
+        Style="{StaticResource MaterialDesignWindow}"
+        
+        Title="NR System"
+        Height="700"
+        Width="1000"
+        Background="Brown"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="100"/>
+
+        </Grid.RowDefinitions>
+
+        <!--Controlls-->
+        <Grid Grid.Row="0"
+              Background="White">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="3.5"/>
+                <ColumnDefinition Width="145"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+            </Grid.ColumnDefinitions>
+
+            <!--Text-->
+            <TextBlock Grid.Column="1"
+                       Text="Login"
+                       FontSize="12"
+                       FontFamily="Consolas"
+                       Foreground="Black"
+                       Padding="6"
+                       VerticalAlignment="Center"/>
+
+            <!--Close Button-->
+            <Button Grid.Column="4"
+                    x:Name="CloseBttn"
+                    Content="{materialDesign:PackIcon Kind=Close, Size=20}"
+                    ToolTip="Close"
+                    ToolTipService.HorizontalOffset="-20"
+                    Cursor="Hand"
+                    Focusable="False"
+                    BorderThickness="0"
+                    Padding="0"
+                    Width="30"
+                    Height="30"
+                    materialDesign:ButtonAssist.CornerRadius="0"
+                    materialDesign:ElevationAssist.Elevation="Dp0"
+                    Click="CloseBttn_Click">
+
+                <Button.Style>
+
+                    <Style TargetType="Button"
+                           BasedOn="{StaticResource MaterialDesignRaisedButton}">
+
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="Black"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Setter Property="Background" Value="#ff1a1a"/>
+                                <Setter Property="Foreground" Value="White"/>
+
+                            </Trigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </Button.Style>
+
+            </Button>
+
+            <!--Minimize Button-->
+            <Button Grid.Column="3"
+                    x:Name="MinimizeBttn"
+                    Content="{materialDesign:PackIcon Kind=Minus, Size=20}"
+                    ToolTip="Minimize"
+                    Cursor="Hand"
+                    Focusable="False"
+                    BorderThickness="0"
+                    Padding="0"
+                    Width="30"
+                    Height="30"
+                    materialDesign:ButtonAssist.CornerRadius="0"
+                    materialDesign:ElevationAssist.Elevation="Dp0"
+                    Click="MinimizeBttn_Click">
+
+                <Button.Style>
+
+                    <Style TargetType="Button"
+                           BasedOn="{StaticResource MaterialDesignRaisedButton}">
+
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="Black"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Setter Property="Background" Value="#4c4c4c"/>
+                                <Setter Property="Foreground" Value="White"/>
+
+                            </Trigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </Button.Style>
+
+            </Button>
+
+        </Grid>
+
+        <!--Login Fieled-->
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition/>
+                    <RowDefinition Height="350"/>
+                    <RowDefinition Height="40"/>
+
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="1"
+                            Background="White"
+                            BorderThickness="5"
+                            CornerRadius="10">
+
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="90"/>
+
+                        </Grid.RowDefinitions>
+
+                        <!--Text-->
+                        <StackPanel Grid.Row="0"
+                                    Orientation="Vertical"
+                                    VerticalAlignment="Center">
+
+                            <TextBlock Text="Wellcome!"
+                                       FontSize="45"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
+
+                            <TextBlock Text="LogIn to the System"
+                                       FontSize="20"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
+
+                        </StackPanel>
+
+                        <!--Username-->
+                        <TextBox Grid.Row="1"
+                                 x:Name="UsernameTB"
+                                 Grid.Column="1"
+                                 FontSize="15"
+                                 FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
+                                 Padding="10"
+                                 Width="270"
+                                 Height="45"
+                                 Foreground="Black"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:HintAssist.Hint="Username"
+                                 materialDesign:HintAssist.Foreground="Black"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+
+                        <!--Password-->
+                        <PasswordBox Grid.Row="2"
+                                     x:Name="PassTB"
+                                     FontSize="15"
+                                     FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
+                                     Padding="10"
+                                     Width="270"
+                                     Height="45"
+                                     Foreground="Black"
+                                     Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
+                                     materialDesign:HintAssist.Hint="Password"
+                                     materialDesign:HintAssist.Foreground="Black"
+                                     materialDesign:TextFieldAssist.HasClearButton="True"
+                                     materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+
+                        <!--Login Button-->
+                        <Button Grid.Row="3"
+                                x:Name="LoginBttn"
+                                Width="200"
+                                Height="40"
+                                Background="Brown"
+                                materialDesign:ElevationAssist.Elevation="Dp0"
+                                Click="LoginBttn_Click">
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock Text="LOGIN"
+                                           FontSize="15"
+                                           Foreground="White"
+                                           FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
+
+                            </StackPanel>
+
+                        </Button>
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+
+        </Grid>
+
+        <!--Copyrights Text-->
+        <Grid Grid.Row="2">
+
+            <TextBlock Text="- All the system rights goes to Department of Immigration and Emigration. -"
+                       Foreground="White"
+                       FontSize="17"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

@@ -93,9 +93,9 @@
 
                 </StackPanel>
 
-                <!--Info TextBox-->
+                <!--Description-->
                 <TextBox Grid.Row="2"
-                         x:Name="InfoTB"
+                         x:Name="DiscripTB"
                          Grid.Column="1"
                          FontSize="15"
                          FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"

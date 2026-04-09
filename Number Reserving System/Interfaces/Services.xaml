@@ -108,12 +108,14 @@
             </Grid.ColumnDefinitions>
 
             <!--Service1 Button-->
-            <Button Grid.Column="0"
+            <Button x:Name="Serv1Btn"
+                    Grid.Column="0"
                     Grid.Row="0"
                     Width="300"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="Serv1Btn_Click">
 
                 <StackPanel Orientation="Horizontal">
 
@@ -127,12 +129,14 @@
             </Button>
 
             <!--Service2 Button-->
-            <Button Grid.Column="1"
+            <Button x:Name="Serv2Btn"
+                    Grid.Column="1"
                     Grid.Row="0"
                     Width="300"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="Serv2Btn_Click">
 
                 <StackPanel Orientation="Horizontal">
 
@@ -146,12 +150,14 @@
             </Button>
 
             <!--Service3 Button-->
-            <Button Grid.Column="2"
+            <Button x:Name="Serv3Btn"
+                    Grid.Column="2"
                     Grid.Row="0"
                     Width="300"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="Serv3Btn_Click">
 
                 <StackPanel Orientation="Horizontal">
 
@@ -165,12 +171,14 @@
             </Button>
 
             <!--Service4 Button-->
-            <Button Grid.Column="0"
+            <Button x:Name="Serv4Btn"
+                    Grid.Column="0"
                     Grid.Row="1"
                     Width="300"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="Serv4Btn_Click">
 
                 <StackPanel Orientation="Horizontal">
 
@@ -184,12 +192,14 @@
             </Button>
 
             <!--Service5 Button-->
-            <Button Grid.Column="1"
+            <Button x:Name="Serv5Btn"
+                    Grid.Column="1"
                     Grid.Row="1"
                     Width="300"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="Serv5Btn_Click">
 
                 <StackPanel Orientation="Horizontal">
 
@@ -203,12 +213,14 @@
             </Button>
 
             <!--Service6 Button-->
-            <Button Grid.Column="2"
+            <Button x:Name="Serv6Btn"
+                    Grid.Column="2"
                     Grid.Row="1"
                     Width="300"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="Serv6Btn_Click">
 
                 <StackPanel Orientation="Horizontal">
 
@@ -222,12 +234,14 @@
             </Button>
 
             <!--Service7 Button-->
-            <Button Grid.Column="0"
+            <Button x:Name="Serv7Btn"
+                    Grid.Column="0"
                     Grid.Row="2"
                     Width="300"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="Serv7Btn_Click">
 
                 <StackPanel Orientation="Horizontal">
 
@@ -241,12 +255,14 @@
             </Button>
 
             <!--Service8 Button-->
-            <Button Grid.Column="1"
+            <Button x:Name="Serv8Btn"
+                    Grid.Column="1"
                     Grid.Row="2"
                     Width="300"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="Serv8Btn_Click">
 
                 <StackPanel Orientation="Horizontal">
 

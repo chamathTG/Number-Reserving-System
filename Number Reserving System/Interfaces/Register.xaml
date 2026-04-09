@@ -144,9 +144,10 @@
 
                         <!--Name-->
                         <TextBox Grid.Row="2"
-                                 x:Name="UsernameTB"
+                                 x:Name="NameTB"
                                  Grid.Column="1"
                                  FontSize="15"
+                                 MaxLength="30"
                                  FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                                  Padding="10"
                                  Width="400"
@@ -157,13 +158,16 @@
                                  materialDesign:HintAssist.Foreground="Black"
                                  materialDesign:HintAssist.HintHorizontalAlignment="Center"
                                  materialDesign:TextFieldAssist.HasClearButton="True"
-                                 materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                                 materialDesign:TextFieldAssist.ClearButtonSize="19"
+                                 materialDesign:TextFieldAssist.CharacterCounterVisibility="Hidden"
+                                 PreviewTextInput="NameTB_PreviewTextInput"/>
 
                         <!--Number-->
                         <TextBox Grid.Row="3"
-                                 x:Name="ContactNumTB"
+                                 x:Name="NumTB"
                                  Grid.Column="1"
                                  FontSize="15"
+                                 MaxLength="11"
                                  FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                                  Padding="10"
                                  Width="400"
@@ -174,13 +178,17 @@
                                  materialDesign:HintAssist.Foreground="Black"
                                  materialDesign:HintAssist.HintHorizontalAlignment="Center"
                                  materialDesign:TextFieldAssist.HasClearButton="True"
-                                 materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                                 materialDesign:TextFieldAssist.ClearButtonSize="19"
+                                 materialDesign:TextFieldAssist.CharacterCounterVisibility="Hidden"
+                                 PreviewTextInput="NumTB_PreviewTextInput"
+                                 PreviewKeyDown="NumTB_PreviewKeyDown"/>
 
                         <!--ID Number-->
                         <TextBox Grid.Row="4"
                                  x:Name="IdNumTB"
                                  Grid.Column="1"
                                  FontSize="15"
+                                 MaxLength="12"
                                  FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                                  Padding="10"
                                  Width="400"
@@ -191,7 +199,10 @@
                                  materialDesign:HintAssist.Foreground="Black"
                                  materialDesign:HintAssist.HintHorizontalAlignment="Center"
                                  materialDesign:TextFieldAssist.HasClearButton="True"
-                                 materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                                 materialDesign:TextFieldAssist.ClearButtonSize="19"
+                                 materialDesign:TextFieldAssist.CharacterCounterVisibility="Hidden"
+                                 PreviewTextInput="IdNumTB_PreviewTextInput"
+                                 PreviewKeyDown="IdNumTB_PreviewKeyDown"/>
 
                         <!--Continue Button-->
                         <Button Grid.Row="5"

@@ -12,9 +12,6 @@ using System.Windows.Shapes;
 
 namespace Number_Reserving_System.Interfaces
 {
-    /// <summary>
-    /// Interaction logic for OtherServices.xaml
-    /// </summary>
     public partial class OtherServices : Window
     {
         public OtherServices()
@@ -25,9 +22,20 @@ namespace Number_Reserving_System.Interfaces
         private void OsContinueBttn_Click(object sender, RoutedEventArgs e)
         {
             Number numberWinShow = new Number();
-            numberWinShow.Show();
-
-            this.Close();
+            Message messageWin = new Message();
+            Services servicesWin = new Services();
+            
+            if(String.IsNullOrWhiteSpace(DiscripTB.Text))
+            {
+                messageWin.OpacityHandler(this);
+                messageWin.TrueBttnTxt.Text = "OK";
+                messageWin.MsgTB.Text = "Description is empty!";
+                messageWin.ShowDialog();
+            }
+            else
+            {
+                servicesWin.toNumberWin(this);
+            }
         }
 
         private void OsBackBttn_Click(object sender, RoutedEventArgs e)

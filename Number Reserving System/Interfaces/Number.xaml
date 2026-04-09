@@ -98,6 +98,7 @@
                                FontFamily="pack://application:,,,/assets/fonts/#Fredoka SemiBold"/>
 
                     <TextBlock Grid.Row="3"
+                               x:Name="NumberTxt"
                                Text="0000"
                                FontSize="65"
                                Foreground="White"
@@ -128,11 +129,12 @@
                     Width="250"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="PrintBttn_Click">
 
                 <StackPanel Orientation="Horizontal">
 
-                    <TextBlock Text="Print The Recipt  |  "
+                    <TextBlock Text="Print The Number  |  "
                                FontSize="18"
                                Foreground="Black"
                                VerticalAlignment="Center"
@@ -154,7 +156,8 @@
                     Width="250"
                     Height="45"
                     Background="White"
-                    materialDesign:ElevationAssist.Elevation="Dp8">
+                    materialDesign:ElevationAssist.Elevation="Dp8"
+                    Click="SmsBttn_Click">
 
                 <StackPanel Orientation="Horizontal">
 

@@ -199,12 +199,16 @@
                                  Padding="10"
                                  Width="270"
                                  Height="45"
+                                 MaxLength="10"
                                  Foreground="Black"
                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                  materialDesign:HintAssist.Hint="Username"
                                  materialDesign:HintAssist.Foreground="Black"
                                  materialDesign:TextFieldAssist.HasClearButton="True"
-                                 materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                                 materialDesign:TextFieldAssist.CharacterCounterVisibility="Hidden"
+                                 materialDesign:TextFieldAssist.ClearButtonSize="19"
+                                 PreviewTextInput="UsernameTB_PreviewTextInput"
+                                 PreviewKeyDown="UsernameTB_PreviewKeyDown"/>
 
                         <!--Password-->
                         <PasswordBox Grid.Row="2"
@@ -214,12 +218,16 @@
                                      Padding="10"
                                      Width="270"
                                      Height="45"
+                                     MaxLength="10"
                                      Foreground="Black"
                                      Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
                                      materialDesign:HintAssist.Hint="Password"
                                      materialDesign:HintAssist.Foreground="Black"
                                      materialDesign:TextFieldAssist.HasClearButton="True"
-                                     materialDesign:TextFieldAssist.ClearButtonSize="19"/>
+                                     materialDesign:TextFieldAssist.CharacterCounterVisibility="Hidden"
+                                     materialDesign:TextFieldAssist.ClearButtonSize="19"
+                                     PreviewTextInput="PassTB_PreviewTextInput"
+                                     PreviewKeyDown="PassTB_PreviewKeyDown"/>
 
                         <!--Login Button-->
                         <Button Grid.Row="3"

@@ -16,12 +16,12 @@ namespace Number_Reserving_System.Interfaces
 {
     public partial class Message : Window
     {
-        public bool? isBtnClicked = null;
-        
         public Message()
         {
             InitializeComponent();
         }
+
+        public bool? isBtnClicked = null;
 
         public void TrueBttn_Click(object sender, RoutedEventArgs e)
         {
@@ -67,7 +67,7 @@ namespace Number_Reserving_System.Interfaces
 
         public async void AutoClose()
         {
-            await Task.Delay(TimeSpan.FromSeconds(5));
+            await Task.Delay(TimeSpan.FromSeconds(10));
 
             if(this.IsVisible)
             {

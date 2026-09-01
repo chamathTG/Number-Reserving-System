@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using Number_Reserving_System.Database;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -51,11 +53,35 @@ namespace Number_Reserving_System.Interfaces
 
         private void ExitBttn_Click(object sender, RoutedEventArgs e)
         {
-            Login loginWin = new Login();
-            loginWin.Show();
+            DataBase db = new DataBase();
 
-            this.Owner?.Close();
-            this.Close();
+            if(int.TryParse(PinPB.Password, out int pin))
+            {
+                using(SqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    string sqlQuery = "SELECT Pin_Num FROM Pin WHERE Id = 1";
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))
+                    {
+                        object dbValue = cmd.ExecuteScalar();
+
+                        if(dbValue != null)
+                        {
+                            int storedPin = Convert.ToInt32(dbValue);
+
+                            if(storedPin == pin)
+                            {
+                                Login loginWin = new Login();
+                                loginWin.Show();
+
+                                this.Owner.Close();
+                                this.Close();
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void CancelBttn_Click(object sender, RoutedEventArgs e)

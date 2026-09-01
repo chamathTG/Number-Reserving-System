@@ -35,19 +35,17 @@
             </Grid.RowDefinitions>
             
             <!--PIN-->
-            <PasswordBox Name="PinPB"
+            <PasswordBox x:Name="PinPB"
                          Grid.Row="1"
                          FontSize="15"
-                         MaxLength="4"
+                         MaxLength="5"
                          FontFamily="pack://application:,,,/assets/fonts/#Alan Sans"
                          Padding="10"
                          Width="280"
                          Height="45"
+                         HorizontalContentAlignment="Center"
                          Foreground="Black"
-                         Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
-                         materialDesign:HintAssist.Foreground="Black"
-                         materialDesign:TextFieldAssist.HasClearButton="True"
-                         materialDesign:TextFieldAssist.ClearButtonSize="19"
+                         Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
                          materialDesign:TextFieldAssist.CharacterCounterVisibility="Hidden"
                          PreviewTextInput="PinPB_PreviewTextInput"
                          PreviewKeyDown="PinPB_PreviewKeyDown"/>

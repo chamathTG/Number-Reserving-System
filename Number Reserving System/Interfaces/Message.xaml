@@ -76,7 +76,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <!--Button1-->
+                <!--Button 1-->
                 <Button Grid.Column="1"
                         x:Name="TrueBttn"
                         Width="70"
@@ -99,7 +99,7 @@
 
                 </Button>
 
-                <!--Button2-->
+                <!--Button 2-->
                 <Button Grid.Column="2"
                         x:Name="FalseBttn"
                         Visibility="Collapsed"  

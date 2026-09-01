@@ -15,8 +15,6 @@ namespace Number_Reserving_System.Interfaces
 {
     public partial class Register : Window
     {
-        Message messageWin = new Message();
-
         public Register()
         {
             InitializeComponent();
@@ -32,6 +30,8 @@ namespace Number_Reserving_System.Interfaces
 
         private void ContinueBttn_Click(object sender, RoutedEventArgs e)
         {
+            var messageWin = new Message();
+
             messageWin.OpacityHandler(this);
             messageWin.TrueBttnTxt.Text = "OK";
 

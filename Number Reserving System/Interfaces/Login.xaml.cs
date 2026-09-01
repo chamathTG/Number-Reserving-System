@@ -1,4 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
+using Number_Reserving_System.Interfaces.AdminUC;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -59,7 +60,6 @@ namespace Number_Reserving_System.Interfaces
         private void LoginBttn_Click(object sender, RoutedEventArgs e)
         {
             Message messageWin = new Message();
-
             messageWin.OpacityHandler(this);
             messageWin.TrueBttnTxt.Text = "OK";
 
@@ -80,10 +80,23 @@ namespace Number_Reserving_System.Interfaces
             }
             else
             {
-                Register registerWin = new Register();
-                registerWin.Show();
-
-                this.Close();
+                if((UsernameTB.Text == "admin") && (PassTB.Password == "admin"))
+                {
+                    Admin adminWin = new Admin();
+                    adminWin.Show();
+                    this.Close();
+                }
+                else if((UsernameTB.Text == "display") && (PassTB.Password == "display"))
+                {
+                    Register registerWin = new Register();
+                    registerWin.Show();
+                    this.Close();
+                }
+                else
+                {
+                    messageWin.MsgTB.Text = "Username or Password wrong!";
+                    messageWin.ShowDialog();
+                }
             }
         }
 

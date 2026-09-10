@@ -5,7 +5,7 @@ using System.Configuration;
 using System.Data.Common;
 using System.Text;
 
-namespace Number_Reserving_System.Database
+namespace Number_Reserving_System.Resources
 {
     internal class DataBase
     {
@@ -13,9 +13,7 @@ namespace Number_Reserving_System.Database
 
         public DataBase()
         {
-            connectionString = ConfigurationManager
-                .ConnectionStrings["dbConnection"]
-                .ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
         }
 
         public SqlConnection GetConnection()

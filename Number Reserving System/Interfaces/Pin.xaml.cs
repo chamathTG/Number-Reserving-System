@@ -1,5 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
-using Number_Reserving_System.Database;
+using Number_Reserving_System.Resources;
 using System;
 using System.Collections.Generic;
 using System.Text;
